@@ -24,19 +24,19 @@ First add the cartridge to your application followed by configuring the applicat
 	  OPENSHIFT_DORADUS_USER=lucille OPENSHIFT_DORADUS_PWD=agnes -a my-app
 	  
     # Add cartridge
-    $ rhc cartridge add -a <your-app-name> https://raw.githubusercontent.com/dell-oss/openshift-log-cartridge-v2/master/metadata/manifest.yml
+    $ rhc cartridge add -a <your-app-name> https://raw.githubusercontent.com/PiyushMattoo/openshift-log-cartridge/master/metadata/manifest.yml
 	
 
-## Usage
+## Usage / Log types supported
 
-Redirect the application logs to OPENSHIFT_LOG_DIR in the below format and the log will be tailed, loaded into Doradus.
+The Logging Cartridge supports Apache, HAProxy, JBoss log formats and a default format as shown below. Redirect the application logs to OPENSHIFT_LOG_DIR in the corresponding format and the log will be tailed, loaded into Doradus.
 
 `<ISO 8601 Standard time> <LogLevel> <Log Message>`  
 For example: `2015-03-20 11:08:05 INFO Test Message One` 
 
 Doradus REST command to view the logs:
 
-`http://<DoradusHost>:<DoradusPort>/<OPENSHIFT_APP_NAME>/logs_<OPENSHIFT_APP_NAME>_<OPENSHIFT_NAMESPACE></_query?tenant=<DoradusTenant>&q=*`
+`http://<DoradusHost>:<DoradusPort>/LoggingApplication/logs_<OPENSHIFT_APP_NAME>_<OPENSHIFT_NAMESPACE></_query?tenant=<DoradusTenant>&q=*`
 
 Doradus Spider documentation can be viewed at:
 
