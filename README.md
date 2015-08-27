@@ -24,7 +24,7 @@ First add the cartridge to your application followed by configuring the applicat
 	  OPENSHIFT_DORADUS_USER=lucille OPENSHIFT_DORADUS_PWD=agnes -a my-app
 	  
     # Add cartridge
-    $ rhc cartridge add -a <your-app-name> https://raw.githubusercontent.com/PiyushMattoo/openshift-log-cartridge/master/metadata/manifest.yml
+    $ rhc cartridge add -a <your-app-name> https://raw.githubusercontent.com/dell-oss/openshift-log-cartridge-v2/master/metadata/manifest.yml
 	
 
 ## Usage / Log types supported
